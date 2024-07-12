@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celldaytemp" rowHeight="110" id="KGk-i7-Jjw" customClass="Weatherdetails" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llO-Ko-tTQ">
+                        <rect key="frame" x="0.0" y="11" width="365" height="88"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kll-SU-osn">
+                                <rect key="frame" x="14.5" y="33.5" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-54-5aV">
+                                <rect key="frame" x="303" y="26.5" width="29" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-FE-Owr">
+                                <rect key="frame" x="305" y="53.5" width="25" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kll-SU-osn" firstAttribute="top" secondItem="ddk-54-5aV" secondAttribute="bottom" multiplier="0.75" id="E0n-Lh-Uuu"/>
+                            <constraint firstItem="fKe-FE-Owr" firstAttribute="centerX" secondItem="ddk-54-5aV" secondAttribute="centerX" id="NyL-9h-uPL"/>
+                            <constraint firstItem="kll-SU-osn" firstAttribute="leading" secondItem="llO-Ko-tTQ" secondAttribute="centerX" multiplier="0.08" id="XmN-qn-vYr"/>
+                            <constraint firstItem="fKe-FE-Owr" firstAttribute="top" secondItem="ddk-54-5aV" secondAttribute="bottom" multiplier="1.2" id="op5-4b-9Dl"/>
+                            <constraint firstAttribute="trailing" secondItem="ddk-54-5aV" secondAttribute="centerX" multiplier="1.15" id="uVd-5k-Cfc"/>
+                            <constraint firstItem="kll-SU-osn" firstAttribute="centerY" secondItem="llO-Ko-tTQ" secondAttribute="centerY" id="z4s-lI-t1l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="llO-Ko-tTQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AMI-TC-xPH"/>
+                    <constraint firstItem="llO-Ko-tTQ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.8" id="DOK-NY-Cdb"/>
+                    <constraint firstItem="llO-Ko-tTQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="FDI-0b-nLP"/>
+                    <constraint firstItem="llO-Ko-tTQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qhc-DZ-9AW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelDay" destination="kll-SU-osn" id="elT-H6-aAQ"/>
+                <outlet property="labelMaxtemp" destination="ddk-54-5aV" id="Quq-2o-PdW"/>
+                <outlet property="labelMintemp" destination="fKe-FE-Owr" id="p6R-hG-gMP"/>
+                <outlet property="viewrec" destination="llO-Ko-tTQ" id="Bdc-3c-xMg"/>
+            </connections>
+            <point key="canvasLocation" x="166.40000000000001" y="90.854572713643179"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
