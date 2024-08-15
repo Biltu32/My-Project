@@ -1,2 +1,2 @@
-# My-Project
+# MyProject
 Treasury with knowledge
